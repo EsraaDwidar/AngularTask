@@ -23,18 +23,16 @@ export class LoginComponent implements OnInit {
   loginFormSubmit(loginForm:FormGroup){
     this.isLoading = true;
     console.log(loginForm.value);
-    const Email = this.loginForm.get('email')?.value;
-  const Password = this.loginForm.get('password')?.value;
 
     this._AuthService.Signin(loginForm.value).subscribe({
       next: (response) => {
         this.isLoading = false;
         console.log(response);
-        if (response.message === "success") {
+        if (response && response.accessToken && response.username) {
           localStorage.setItem('userToken', response.token);
           console.log("Login successful");
           // Redirect to home page
-          this._Router.navigate(['home']);
+          this._Router.navigate(['/home']);
         }
         else {
           console.log("Login failed");
