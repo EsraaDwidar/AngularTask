@@ -9,13 +9,7 @@ export class AuthService {
 
   constructor(private _HttpClient:HttpClient) { }
  
-//email:string, password:string
+  
   Signin(userData:object):Observable<any> {
-    return this._HttpClient.post('https://dummyjson.com/auth/login', userData
-    //   {
-    //   email: email,
-    //   password: password
-    // }
-  );
-  }
+    return this._HttpClient.post('https://dummyjson.com/auth/login', userData);}
 }
