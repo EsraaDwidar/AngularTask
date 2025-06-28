@@ -6,12 +6,11 @@
         <p class="pLogiColor">Kindly fill in your details below to sign in your account</p>
 
         <form (ngSubmit)="loginFormSubmit(loginForm)" [formGroup]="loginForm">
-          <label for="email" class="mb-3 labelColor">Email Address</label>
-          <input formControlName="email" class="form-control p-3 mb-3 ramadiColor bg-white" type="email" name="email" id="email" placeholder="Please enter your email" />
+          <label for="username" class="mb-3 labelColor">Email Address</label>
+          <input formControlName="username" class="form-control p-3 mb-3 ramadiColor bg-white" type="text" name="username" id="username" placeholder="Please enter your email" />
 
-          <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" class="alert alert-danger p-1">
-            <p class="m-0" *ngIf="loginForm.get('email')?.getError('required')">email is required</p>
-            <p class="m-0" *ngIf="loginForm.get('email')?.getError('email')">email format invalid</p>
+          <div *ngIf="loginForm.get('username')?.errors && loginForm.get('username')?.touched" class="alert alert-danger p-1">
+            <p class="m-0" *ngIf="loginForm.get('username')?.getError('required')">username is required</p>
           </div>
 
           <label for="password" class="mb-3 labelColor">Password</label>
@@ -19,7 +18,6 @@
 
           <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="alert alert-danger p-1">
             <p class="m-0" *ngIf="loginForm.get('password')?.getError('required')">password is required</p>
-            <p class="m-0" *ngIf="loginForm.get('password')?.getError('pattern')">password must start with uppercase</p>
           </div>
 
           <button [disabled]="loginForm.invalid" class="btn w-100 bluecolorbg fw-medium mb-3" type="submit">
