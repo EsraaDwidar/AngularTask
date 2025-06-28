@@ -1,0 +1,23 @@
+.linearcolor{
+    background: linear-gradient(to right, #60BBEE, #0A72AD);
+}
+.icon{
+    background-color: #D0EEFF;
+    font-size: 25px;
+}
+.sec3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;             
+  height: 9px;            
+  background: linear-gradient(to right, #60BBEE, #0A72AD);  
+  margin-left: 10px;
+}
+.subColor{
+    background-color: #E8F7FF;
+}
+.pramadi{
+    color: #8B8B8B;
+}

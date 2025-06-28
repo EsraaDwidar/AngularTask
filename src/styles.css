@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+.bluecolor {
+    color: #0A72AD;
+}
+.bluecolorbg {
+    background-color: #0A72AD;
+}
+.background {
+    background-color: #2A2A2A ;
+}
+.ramadiColor {
+    color: #C4C4C4  ;
+}
+.nav-link:hover {
+  color: white;
+}
+.btn{
+    color: white;
+}
+.btn:hover {
+  color: #0A72AD;
+
+  background-color: white;
+}
+.phome{
+    color: #6A6A6A;
+}
